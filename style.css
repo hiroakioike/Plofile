@@ -1,0 +1,27 @@
+@charset "UTF-8"
+
+html {
+    font-size: 100%;
+}
+
+h1 {
+    background-image: url(img/logo.svg);
+    width: 50px;
+    height: 50px;
+}
+
+li {
+    color: blue;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    }
+
+div {
+    background-image: url(img/mainvisual.jpg);
+    height: 10%;
+    object-fit: cover;
+}
+
