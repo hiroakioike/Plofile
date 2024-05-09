@@ -113,10 +113,10 @@ body {
 @media screen and (max-width: 600px) {
   #bicycle ul {
     flex-direction: column;
-  }
-  #bicycle li {
-    width: 100%;
-    margin-bottom: 30px;
+    li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
 }
 
