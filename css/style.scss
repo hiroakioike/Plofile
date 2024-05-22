@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.html {
+html {
   font-size: 100%;
 }
 
@@ -8,13 +8,13 @@ body {
   color: #383e45;
   font-size: 0.9rem;
 }
-.a {
+a {
   text-decoration: none;
 }
-.img {
+img {
   max-width: 100%;
 }
-.li {
+li {
   list-style: none;
 }
 .site-title {
@@ -29,6 +29,7 @@ body {
 .section-title {
   display: inline-block;
   font-size: 2rem;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 60px;
   border-bottom: solid 1px #383e45;
@@ -49,15 +50,18 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  ul {
+  .header-nav-list {
     display: flex;
     padding: 10px 0;
     li {
       margin-left: 30px;
-      a {
-        color: #24292e;
-        &:hover {
-          opacity: 0.7;
+      &:first-child {
+        margin-left: 0;
+        a {
+          color: #24292e;
+          &:hover {
+            opacity: 0.7;
+          }
         }
       }
     }
@@ -78,7 +82,7 @@ body {
   }
 }
 
-#about .content {
+.content-about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +98,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  #about .content {
+  .content-about {
     flex-direction: column;
   }
   #about img {
@@ -102,7 +106,7 @@ body {
   }
 }
 
-#bicycle ul {
+.bicycle-list {
   display: flex;
   justify-content: space-between;
   li {
@@ -111,7 +115,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  #bicycle ul {
+  .bicycle-list {
     flex-direction: column;
     li {
       width: 100%;
