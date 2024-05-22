@@ -55,29 +55,48 @@ li {
     padding: 10px 0;
     li {
       margin-left: 30px;
+      a {
+        color: #24292e;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
       &:first-child {
         margin-left: 0;
-        a {
-          color: #24292e;
-          &:hover {
-            opacity: 0.7;
-          }
-        }
       }
     }
   }
 }
 
+// Mixinを使うことで、ブレイクポイントを変数で管理し、
+// メディアクエリのスタイルを再利用可能なmixinにまとめて再利用性、保守性高める
+
+// ブレイクポイントの変数定義
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// メディアクエリのmixin定義
+@mixin respond-to($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// メインビジュアルのスタイル定義
 #mainvisual {
   margin-bottom: 80px;
+
   img {
     width: 100%;
     max-width: 1920px;
     height: 600px;
     object-fit: cover;
 
-    @media screen and (max-width: 600px) {
+    // モバイル向けのスタイル
+    @include respond-to($breakpoint-mobile) {
       height: calc(100vh - 60px);
+      // スマホ画面の縦幅高さに対してヘッダーの高さの分（60px）だけ画面下にはみだしてしまわないように調整
     }
   }
 }

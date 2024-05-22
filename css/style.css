@@ -62,14 +62,14 @@ li {
 #header .header-nav-list li {
   margin-left: 30px;
 }
-#header .header-nav-list li:first-child {
-  margin-left: 0;
-}
-#header .header-nav-list li:first-child a {
+#header .header-nav-list li a {
   color: #24292e;
 }
-#header .header-nav-list li:first-child a:hover {
+#header .header-nav-list li a:hover {
   opacity: 0.7;
+}
+#header .header-nav-list li:first-child {
+  margin-left: 0;
 }
 
 #mainvisual {
